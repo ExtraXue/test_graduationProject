@@ -1,0 +1,203 @@
+*,
+body{
+	padding: 0px;
+	margin:0 auto;
+}
+/*
+html { filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1); }
+*/
+
+body {
+    font-family:"微软雅黑";
+	color: #000000;
+	font-size:12px;
+	text-align:left;
+	background:#FFF;
+}
+dl,
+ul {
+	padding:0;
+	margin:0;
+}
+.nav1:hover{
+    font-weight: bold;
+}
+.nav .nav1{
+    padding:0 30px;
+    height: 100%;
+}
+
+.footer{
+    padding: 30px 0;
+    background-color: #C50C11 ;
+}
+.footer .gywm{
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 21px;
+}
+
+h4{
+	font-size:12px;
+	font-weight:bold;
+	text-align:center;
+}
+li{
+	line-height:25px;
+	overflow:hidden;
+	list-style:none;
+}
+ul li{	
+	padding-left:8px;
+	margin:0 auto;
+}
+ol li{
+	padding:0px;
+	list-style:none;
+}
+dd{
+	line-height:25px;
+}
+p{
+	line-height:20px;
+}
+a{
+	text-decoration:none;
+	color:#000;
+}
+a:hover{
+	text-decoration:underline;
+	color:#F00;
+}
+.more{
+	float:right;
+	font-weight:normal;
+	padding-right:6px;
+	font-size:12px;
+}
+.more a {
+	color:#666;
+}
+.more a:hover {
+	color:#F00;
+}
+img {
+    border: none;
+}
+.bold{
+	font-weight:bold;
+}
+.left{
+	float:left;
+	overflow:hidden;
+}
+.mid{
+	float:left;
+	margin-left:10px;
+}
+.right{
+	float:right;
+}
+.red,
+.red a{
+	color:#F00;
+}
+.f99,
+.f99 a{
+	color:#900;
+}
+.no_Point{
+	background:none;
+	padding:0px;
+}
+.hidden{
+	display:none;
+}
+.limar{
+	display:block;
+}
+dt,
+.title{
+	position:relative;
+	height:28px;
+	line-height:28px;
+	text-align:left;
+}
+#footer{
+	text-align:center;
+}
+.noline{
+	border:0px;
+}
+.main_box{
+	overflow:hidden;
+}
+.hr_10,
+.hr_5,
+.hr_3,
+.hr_1 {
+	height:10px;
+	clear:both;
+	font-size:1px;
+	line-height:1px;
+	overflow:hidden;
+}
+.hr_5{
+	height:5px;
+}
+.hr_3{
+	height:3px;
+}
+.hr_1{
+	height:1px;
+}
+.sub_title{
+	float:left;
+	margin-right:10px;
+}
+.font_14{
+	font-size:14px;
+}
+.font_12{
+	font-size:12px;
+}
+.line,
+.line_2{
+	border-bottom:1px solid #CCC;
+	height:1px;
+	line-height:1px;
+	overflow:hidden;
+}
+.line_2{
+	border-bottom:2px solid #CCC;
+}
+.blue_line{
+	border:1px solid #0850AB;
+}
+.f9a_line{
+	border:1px solid #9A9A9A;
+}
+
+.nopd_one {
+	padding-left:0;
+	padding-right:0;
+}
+.nopd_two {
+	padding-top:0;
+	padding-bottom:0;
+}
+.nopd_three {
+	padding:0;
+}
+#idTRSNavigator{
+	display:none;
+}
+
+#bottom {
+	text-align:center;
+}
+
+
+#footer{text-align:center; width:1000px; position:relative; } 

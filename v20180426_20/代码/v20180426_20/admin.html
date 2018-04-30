@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员界面</title>
+    <link rel="stylesheet" href="./css/master2016.css">
+    <link rel="stylesheet" href="./css/index-dj20171213.css">
+    <link rel="stylesheet" href="./css/admin.css">
+    <script type="text/javascript" src="./css/jquery-1.9.1.min.js"></script>
+    <script src="./css/jquery.superslide.tab.2.1.1.js" type="text/javascript"></script>
+    <script>
+        //顶部文字专题滚动
+        function b(){
+            t = parseInt(x.css('top'));
+            y.css('top','19px');
+            x.animate({top: t - 19 + 'px'},'slow');	//19为每个li的高度
+            if(Math.abs(t) == h-19){ //19为每个li的高度
+                y.animate({top:'0px'},'slow');
+                z=x;
+                x=y;
+                y=z;
+            }
+            setTimeout(b,10000);//滚动间隔时间 现在是10秒
+        }
+        $(document).ready(function(){
+            $('.swap').html($('.news_li').html());
+            x = $('.news_li');
+            y = $('.swap');
+            h = $('.news_li li').length * 38; //19为每个li的高度
+            setTimeout(b,10000);//滚动间隔时间 现在是10秒
+        })
+    </script>
+
+</head>
+<body style="overflow-x:hidden;">
+<div class="dj" style="padding: 0; width: 1020px; height: 154px;">
+    <div class="inner">
+        <div class="header">
+            <div class="header-left">
+                <a href="./index.html" ><img style="padding-bottom: 50px;" src="./icons/symbol.png"></a>
+            </div>
+            <div class="header-right">
+                <div class="header-top">
+                    <div class="header-pic1">
+
+                        <div class="foucua01">
+                            <ul class="slides_item01" style="position: relative; width: 560px; height: 93px;">
+
+                                <li style="position: absolute; width: 560px; left: 0px; top: 0px; display: none;">
+                                    <a href="http://www.dangjian.cn/djw2016sy/djw2016dtztc/201604/t20160426_3318886.shtml" target="_blank"><img src="./css/W020161124384578401337.png" alt="banner1-1.png" title="" width="560" height="85"></a></li>
+
+                                <li style="position: absolute; width: 560px; left: 0px; top: 0px;">
+                                    <a href="http://dangjian.com/jrrd/xwmt/201505/t20150505_2595699.shtml" target="_blank"><img src="./css/W020161124385045731082.png" alt="banner1-4.png" title="" width="560" height="85"></a></li>
+
+                                <li style="position: absolute; width: 560px; left: 0px; top: 0px; display: none;">
+                                    <a href="http://www.dangjian.cn/djw2016sy/djw2016dtztc/201604/t20160426_3318882.shtml" target="_blank"><img src="./css/W020161124384501294075.png" alt="banner1-5.png" title="" width="560" height="85"></a></li>
+
+
+
+                            </ul>
+                            <div class="num" style="display:none"><li class="">1</li><li class="on">2</li><li>3</li></div>
+                        </div>
+
+                    </div>
+                    <div class="header-pic2">
+                        <li><a href="http://jhsjk.people.cn/" target="_blank"><img src="./css/W020180202571094726487.jpg" alt="1.jpg" title="" width="265" height="85"></a></li>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="header-bottom">
+                    <div class="date">
+                        <div class="date" id="localtime"></div>
+
+                        <script type="text/javascript">
+
+                            function showLocale(objD) {
+                                var str, colorhead, colorfoot;
+                                var yy = objD.getYear();
+                                if(yy < 1900) yy = yy + 1900;
+                                var MM = objD.getMonth() + 1;
+                                if(MM < 10) MM = '0' + MM;
+                                var dd = objD.getDate();
+                                if(dd < 10) dd = '0' + dd;
+                                var hh = objD.getHours();
+                                if(hh < 10) hh = '0' + hh;
+                                var mm = objD.getMinutes();
+                                if(mm < 10) mm = '0' + mm;
+                                var ss = objD.getSeconds();
+                                if(ss < 10) ss = '0' + ss;
+                                var ww = objD.getDay();
+                                if(ww == 0) colorhead = "<font color=\"#777\">";
+                                if(ww > 0 && ww < 6) colorhead = "<font color=\"#777\">";
+                                if(ww == 6) colorhead = "<font color=\"#777\">";
+                                if(ww == 0) ww = "星期日";
+                                if(ww == 1) ww = "星期一";
+                                if(ww == 2) ww = "星期二";
+                                if(ww == 3) ww = "星期三";
+                                if(ww == 4) ww = "星期四";
+                                if(ww == 5) ww = "星期五";
+                                if(ww == 6) ww = "星期六";
+                                colorfoot = "</font>"
+                                str = colorhead + yy + "-" + MM + "-" + dd + " " + "  " + ww + colorfoot;
+                                return(str);
+                            }
+
+                            function tick() {
+                                var today;
+                                today = new Date();
+                                document.getElementById("localtime").innerHTML = showLocale(today);
+                                window.setTimeout("tick()", 1000);
+                            }
+                            tick();
+                        </script>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+
+<div class="nav">
+    <div class="inner">
+        <ul>
+            <li class="nav1"><a href="index.html">首页</a></li>
+            <li class="nav1"><a href="dept_info.html" target="context_inner">部门概况</a>
+                <ul class="sub_nav" style="width: 64px;height: 100px;visibility: hidden;position:absolute;border: dashed">
+                    <li class="nav1_1" style="display: block;width: 100%;">A</li>
+                    <li class="nav1_2" style="display: block;width: 100%;">B</li>
+                </ul>
+            </li>
+            <li class="nav1"><a href="notification.html" target="context_inner">通知公告</a></li>
+            <li class="nav1"><a href="#" target="conetext_inner">党建工作</a></li>
+            <li class="nav1"><a href="#" target="conetext_inner">干部工作</a></li>
+            <li class="nav1"><a href="#" target="conetext_inner">人才工作</a></li>
+            <li class="nav1"><a href="#" target="conetext_inner">党校工作</a></li>
+            <li class="nav1"><a href="#" >登录</a></li><!--在当前页面打开-->
+            <div class="clear"></div>
+        </ul>
+    </div>
+</div>
+
+<!--动态页面 jQuery-->
+<script type="text/javascript">
+$(function(){
+$(".nav h2").click(function(){
+$(this).next().slideToggle(200);
+$(this).toggleClass("on");
+})
+$(".nav ul li a").click(function(){
+$("#a_leader_txt").text($(this).text());
+$(".nav ul li a").removeClass("on");
+$(this).addClass("on");
+})
+});
+</script>
+
+<div class="context">
+    <div class="conetext_inner">
+        <iframe scrolling="auto" frameborder="0" src="note_info.html" name="context_inner" width="100%" height="100%">
+        </iframe>
+
+
+        </div>
+
+
+    </div>
+</div>
+
+<div class="footer">
+    <div class="inner">
+        <div class="gywm">关于我们</div>
+        <ul class="gywm1">
+            <li class="lxwm">
+                <h4><a href="http://www.dangjian.com/syzh/gywm/201107/t20110727_261695.shtml" target="_blank">联系我们</a></h4>
+                <p>地址：江西省南昌市东华理工大学南昌校区<br>邮编：330000 (函件)<br>热线电话：123456</p>
+            </li>
+            <li class="zx ml80" style="padding-left: 520px;">
+                <ul>
+                    <li><div class="zx1"></div><a href="http://www.dangjian.cn/syzh/xglj/zxdy/201608/t20160824_3622450.shtml">在线订阅</a></li>
+                    <li class="mt13"><div class="zx2"></div><a href="mailto:howardxue123@foxmail.com">在线投稿</a></li>
+                    <li class="mt13"><div class="zx3"></div><a href="mailto:howardxue123@foxmail.com">电子邮件</a></li>
+                </ul>
+            </li>
+
+            <div class="clear"></div>
+        </ul>
+    </div>
+
+</div>
+
+<script>
+
+    $(function(){
+        $(".foucua01").slide({ titCell:".num" , mainCell:".slides_item01" , effect:"fold", autoPlay:true, delayTime:1000 , autoPage:true ,interTime:5000});
+        //delayTime:效果速度//effect：效果的展现形式
+
+
+        //时代先锋
+        var num = $('.box-pic').size();
+        $('.wrap').width(62 * num + 8 * (num-1));
+        var a = 0;
+        $('.btn').click(function(){
+            var index1 = $(this).index('.btn');
+            if(index1 == 0){
+                a--;
+                if(a <= 0){
+                    a = 0;
+                }
+                $('.wrap').animate({left:-a*70*2},500)
+            }else if(index1 == 1){
+                a++;
+                if(a >= (num-4)/2){
+                    a = (num-4)/2;
+                }
+                $('.wrap').animate({left:-a*70*2},500)
+            }
+        })
+
+
+        //网上纪念馆切换
+        $('.lx li').eq(0).css('color','#fee82d');
+        $('.lingxiu').eq(0).show();
+        $('.lx li').click(function(){
+            var index0 = $(this).index('.lx li');
+            $('.lx li').css('color','');
+            $('.lx li').eq(index0).css('color','#fee82d');
+            $('.lingxiu').hide();
+            $('.lingxiu').eq(index0).show();
+        });
+
+        //切换tab
+        $('.lx-tb1').hide();
+        $('.lx-tb1').eq(0).show();
+        $('.lx-tb2').hide();
+        $('.lx-tb2').eq(0).show();
+        $('.lx-tb').eq(0).css({'border-bottom':'2px solid #C50C11','color':'#C50C11','font-weight':'bold'});
+        $('.lx-tb a').eq(0).css('color','#C50C11');
+        /*$('.xxdj1').eq(0).show();*/
+        $('.lx-tb').hover(function(){
+            var index6 = $(this).index('.lx-tb');
+            $('.lx-tb2').hide();
+            $('.lx-tb2').eq(index6).show();
+            $('.lx-tb').css({'border':'none','color':'#444444','font-weight':'normal'});
+            $('.lx-tb').eq(index6).css({'border-bottom':'2px solid #C50C11','color':'#C50C11','font-weight':'bold'});
+            $('.lx-tb1').hide();
+            $('.lx-tb1').eq(index6).show();
+            $('.lx-tb a').css('color','');
+            $('.lx-tb a').eq(index6).css('color','#C50C11');
+            $('.lx-tb1').hide();
+            $('.lx-tb1').eq(index6).show();
+        })
+
+
+
+        $('.xxdj-1').hide();
+        $('.xxdj-1').eq(0).show();
+        $('.xxdj-list').eq(0).show();
+        $('.xxdj').eq(0).css({'border-bottom':'2px solid #C50C11','color':'#C50C11','font-weight':'bold'});
+        $('.xxdj a').eq(0).css('color','#C50C11');
+        $('.xxdj1').eq(0).show();
+        $('.xxdj').hover(function(){
+            var index6 = $(this).index('.xxdj');
+            $('.xxdj-list').hide();
+            $('.xxdj-list').eq(index6).show();
+            $('.xxdj').css({'border':'none','color':'#444444','font-weight':'normal'});
+            $('.xxdj').eq(index6).css({'border-bottom':'2px solid #C50C11','color':'#C50C11','font-weight':'bold'});
+            $('.xxdj1').hide();
+            $('.xxdj1').eq(index6).show();
+            $('.xxdj a').css('color','');
+            $('.xxdj a').eq(index6).css('color','#C50C11');
+            $('.xxdj-1').hide();
+            $('.xxdj-1').eq(index6).show();
+        })
+
+        $('.znl-list').eq(0).show();
+        $('.znl').eq(0).css({'border-bottom':'2px solid #C50C11','color':'#C50C11','font-weight':'bold'});
+        $('.znl1').eq(0).show();
+        $('.znl').hover(function(){
+            var index7 = $(this).index('.znl');
+            $('.znl-list').hide();
+            $('.znl-list').eq(index7).show();
+            $('.znl').css({'border':'none','color':'#444444','font-weight':'normal'});
+            $('.znl').eq(index7).css({'border-bottom':'2px solid #C50C11','color':'#C50C11','font-weight':'bold'});
+            $('.znl1').hide();
+            $('.znl1').eq(index7).show();
+        })
+
+
+        $('.znl5-1').hide();
+        $('.znl5-1').eq(0).show();
+        $('.whdg-list').eq(0).show();
+        $('.znl5').eq(0).css('border-bottom','2px solid #C50C11');
+        $('.znl5 a').eq(0).css({'color':'#C50C11','font-weight':'bold'});
+        $('.znl5').hover(function(){
+            var index8 = $(this).index('.znl5');
+            $('.whdg-list').hide();
+            $('.whdg-list').eq(index8).show();
+            $('.znl5').css('border','none');
+            $('.znl5').eq(index8).css('border-bottom','2px solid #C50C11');
+            $('.znl5 a').css({'color':'#444444','font-weight':'normal'});
+            $('.znl5 a').eq(index8).css({'color':'#C50C11','font-weight':'bold'});
+            $('.znl5-1').hide();
+            $('.znl5-1').eq(index8).show();
+        })
+
+        $('.lx-box').hide();
+        $('.lx-box').eq(0).show();
+        $('.lx-rmt').hover(function(){
+            var index8 = $(this).index('.lx-rmt');
+            $('.lx-box').hide();
+            $('.lx-box').eq(index8).show();
+            $('.lx-rmt').css('border','none');
+            $('.lx-rmt').eq(index8).css('border-bottom','2px solid #C50C11');
+            $('.lx-rmt').css({'color':'#444444','font-weight':'normal'});
+            $('.lx-rmt').eq(index8).css({'color':'#C50C11','font-weight':'bold'});
+            /*$('.znl5-1').hide();
+             $('.znl5-1').eq(index8).show();*/
+        })
+
+
+
+        var a = 0;
+        setInterval(function(){
+            if(a%2 == 0){
+                $('.lx-rmt').css('border','none');
+                $('.lx-rmt').eq(0).css('border-bottom','2px solid #C50C11');
+                $('.lx-box').hide();
+                $('.lx-box').eq(0).show();
+                $('.lx-rmt').css({'color':'#444444','font-weight':'normal'});
+                $('.lx-rmt').eq(0).css({'color':'#C50C11','font-weight':'bold'});
+            }else if(a%2 == 1){
+                $('.lx-rmt').css('border','none');
+                $('.lx-rmt').eq(1).css('border-bottom','2px solid #C50C11');
+                $('.lx-box').hide();
+                $('.lx-box').eq(1).show();
+                $('.lx-rmt').css({'color':'#444444','font-weight':'normal'});
+                $('.lx-rmt').eq(1).css({'color':'#C50C11','font-weight':'bold'});
+            }
+            a++;
+        },10000)
+
+    });
+
+    // 党刊滚动
+
+</script>
+<script language="javascript" type="text/javascript">
+    <!--//--><![CDATA[//><!--
+    //党刊联盟图片滚动列表
+    var Speed = 1; //速度(毫秒)
+    var Space = 30; //每次移动(px)
+    var PageWidth = 424; //翻页宽度
+    var fill = 0; //整体移位
+    var MoveLock = false;
+    var MoveTimeObj;
+    var Comp = 0;
+    var AutoPlayObj = null;
+    GetObj("List2").innerHTML = GetObj("List1").innerHTML;
+    GetObj('ISL_Cont').scrollLeft = fill;
+    GetObj("ISL_Cont").onmouseover = function(){clearInterval(AutoPlayObj);}
+    GetObj("ISL_Cont").onmouseout = function(){AutoPlay();}
+    AutoPlay();
+    function GetObj(objName){if(document.getElementById){return eval('document.getElementById("'+objName+'")')}else{return eval('document.all.'+objName)}}
+    function AutoPlay(){ //自动滚动
+        clearInterval(AutoPlayObj);
+        AutoPlayObj = setInterval('ISL_GoDown();ISL_StopDown();',5000); //间隔时间
+    }
+    function ISL_GoUp(){ //上翻开始
+        if(MoveLock) return;
+        clearInterval(AutoPlayObj);
+        MoveLock = true;
+        MoveTimeObj = setInterval('ISL_ScrUp();',Speed);
+    }
+    function ISL_StopUp(){ //上翻停止
+        clearInterval(MoveTimeObj);
+        if(GetObj('ISL_Cont').scrollLeft % PageWidth - fill != 0){
+            Comp = fill - (GetObj('ISL_Cont').scrollLeft % PageWidth);
+            CompScr();
+        }else{
+            MoveLock = false;
+        }
+        AutoPlay();
+    }
+    function ISL_ScrUp(){ //上翻动作
+        if(GetObj('ISL_Cont').scrollLeft <= 0){GetObj('ISL_Cont').scrollLeft = GetObj('ISL_Cont').scrollLeft + GetObj('List1').offsetWidth}
+        GetObj('ISL_Cont').scrollLeft -= Space ;
+    }
+    function ISL_GoDown(){ //下翻
+        clearInterval(MoveTimeObj);
+        if(MoveLock) return;
+        clearInterval(AutoPlayObj);
+        MoveLock = true;
+        ISL_ScrDown();
+        MoveTimeObj = setInterval('ISL_ScrDown()',Speed);
+    }
+    function ISL_StopDown(){ //下翻停止
+        clearInterval(MoveTimeObj);
+        if(GetObj('ISL_Cont').scrollLeft % PageWidth - fill != 0 ){
+            Comp = PageWidth - GetObj('ISL_Cont').scrollLeft % PageWidth + fill;
+            CompScr();
+        }else{
+            MoveLock = false;
+        }
+        AutoPlay();
+    }
+    function ISL_ScrDown(){ //下翻动作
+        if(GetObj('ISL_Cont').scrollLeft >= GetObj('List1').scrollWidth){GetObj('ISL_Cont').scrollLeft = GetObj('ISL_Cont').scrollLeft - GetObj('List1').scrollWidth;}
+        GetObj('ISL_Cont').scrollLeft += Space ;
+    }
+    function CompScr(){
+        var num;
+        if(Comp == 0){MoveLock = false;return;}
+        if(Comp < 0){ //上翻
+            if(Comp < -Space){
+                Comp += Space;
+                num = Space;
+            }else{
+                num = -Comp;
+                Comp = 0;
+            }
+            GetObj('ISL_Cont').scrollLeft -= num;
+            setTimeout('CompScr()',Speed);
+        }else{ //下翻
+            if(Comp > Space){
+                Comp -= Space;
+                num = Space;
+            }else{
+                num = Comp;
+                Comp = 0;
+            }
+            GetObj('ISL_Cont').scrollLeft += num;
+            setTimeout('CompScr()',Speed);
+        }
+    }
+    //--><!]]>
+</script>
+
+<script type="text/javascript">
+    // 顶部及大图轮播
+    /*鼠标移过，左右按钮显示*/
+    $(".foucua02").hover(function(){
+        $(this).find(".prev,.next").fadeTo("show",0.1);
+    },function(){
+        $(this).find(".prev,.next").hide();
+    })
+    /*鼠标移过某个按钮 高亮显示*/
+
+    $(".prev,.next").hover(function(){
+        $(this).fadeTo("show",0.7);
+
+    },function(){
+        $(this).fadeTo("show",0.1);
+    })
+    $(".foucua01").slide({ titCell:".num ul" , mainCell:".slides_item" , effect:"fold", autoPlay:true, delayTime:1000 , autoPage:true,interTime:6000 });//如果不输出数字autoPage:"<li><a></a></li>"
+    $(".foucua02").slide({ titCell:".num01 ul" , mainCell:".slides_item" , effect:"fold", autoPlay:true, delayTime:0 , autoPage:true ,interTime:5000});//delayTime:效果速度//effect：效果的展现形式
+    $(".image-show").hide();
+
+
+
+
+    window.onload = window.onresize = window.onscroll = function ()
+    {
+        var oBox = document.getElementById("menu");
+        var oBox01 = document.getElementById("menu01");
+        var iScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        setTimeout(function ()
+        {
+            clearInterval(oBox.timer);
+            var iTop = parseInt((document.documentElement.clientHeight - oBox.offsetHeight)/2) + iScrollTop + 50;
+            oBox.timer = setInterval(function ()
+            {
+                var iSpeed = (iTop - oBox.offsetTop) / 8;
+                iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+                oBox.offsetTop == iTop ? clearInterval(oBox.timer) : (oBox.style.top = oBox.offsetTop + iSpeed  + "px");
+            }, 30)
+        }, 100)
+
+
+        setTimeout(function ()
+        {
+            clearInterval(oBox01.timer01);
+            var iTop = parseInt((document.documentElement.clientHeight - oBox01.offsetHeight)/2) + iScrollTop + 50;
+            oBox01.timer01 = setInterval(function ()
+            {
+                var iSpeed = (iTop - oBox01.offsetTop) / 8;
+                iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+                oBox01.offsetTop == iTop ? clearInterval(oBox01.timer01) : (oBox01.style.top = oBox01.offsetTop + iSpeed  + "px");
+            }, 30)
+        }, 100)
+
+    };
+</script>
+
+
+
+</body>
+</html>

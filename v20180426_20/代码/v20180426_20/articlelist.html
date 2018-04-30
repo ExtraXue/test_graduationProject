@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文章列表模板</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/articlelist.css">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!--跳转网页start-->
+    <script language="JavaScript">
+        <!--
+        function createPageHTML(_nPageCount, _nCurrIndex, _sPageName, _sPageExt){
+            if(_nPageCount == null){
+                return;
+            }
+
+            var prevPage = _nCurrIndex-1//上一页
+            var nextPage = _nCurrIndex+1//下一页
+
+            //设置上一页代码
+            if(_nPageCount>1&&_nCurrIndex!=0&&_nCurrIndex!=1){
+                document.write("<span class=\"First_Page_action\"><a href=\""+_sPageName+"."+_sPageExt+"\">首&nbsp;&nbsp;页</a></span>&nbsp;<span class=\"Fir_Page_action\"><a href=\""+_sPageName+"_" + prevPage + "."+_sPageExt+"\">上一页</a></span>&nbsp;");
+            }
+            else if(_nPageCount>1&&_nCurrIndex!=0&&_nCurrIndex==1){
+                document.write("<span class=\"First_Page_action\"><a href=\""+_sPageName+"."+_sPageExt+"\">首&nbsp;&nbsp;页</a></span>&nbsp;<span class=\"Fir_Page_action\"><a href=\""+_sPageName+"."+_sPageExt+"\">上一页</a></span>&nbsp;");
+            }
+            else{
+                document.write("<span class=\"First_Page\">首&nbsp;&nbsp;页</span>&nbsp;<span class=\"Fir_Page\">上一页</span>&nbsp;");
+            }
+
+            //循环输出页数
+            var num = 5;//每组显示页码数量
+            for(var i=0+(_nCurrIndex-_nCurrIndex%num);i<=(num-1+(_nCurrIndex-_nCurrIndex%num))&&(i<_nPageCount); i++){
+                if(_nCurrIndex==i){
+                    document.write("<span class=\"action_num\">"+(i+1)+"</span>&nbsp;");
+                }
+                else if(i==0){
+                    document.write("<a href=\""+_sPageName+"."+_sPageExt+"\">"+(i+1)+"</a>&nbsp;");
+                }
+                else{
+                    document.write("<a href=\""+_sPageName+"_" + i + "."+_sPageExt+"\">"+(i+1)+"</a>&nbsp;");
+                }
+            }
+
+            //设置下一页代码
+            if(_nPageCount>1&&_nCurrIndex!=(_nPageCount-1)){
+                document.write("<span class=\"next_Page_Action\"><a href=\""+_sPageName+"_" + nextPage + "."+_sPageExt+"\">下一页</a></span>&nbsp;<span class=\"Last_Page_Action\"><a href=\""+_sPageName+"_" + (_nPageCount-1) + "."+_sPageExt+"\">尾&nbsp;&nbsp;页</a></span>&nbsp;");
+            }
+            else{
+                document.write("<span class=\"next_Page\">下一页</span>&nbsp;<span class=\"Last_Page\">尾&nbsp;&nbsp;页</span>&nbsp;");
+            }
+
+            //跳转页面
+            document.write("<font class=\"font12\">转到第&nbsp;<input type='text' value='"+(_nCurrIndex+1)+"' style='width:30px;font-size:12px;' onkeydown='toPage(event,this)' />&nbsp;页</font>");
+        }
+        //跳转页面方法
+        function toPage(_event,_obj){
+            if(_event.keyCode!=13){
+                return false;
+            }
+            var _num = _obj.value;
+            var countPage = 20;
+            if(isNaN(_num)){
+                alert("请输入数字");
+                return false;
+            }
+            var url = "index"+"_"+(_num-1)+"."+"shtml";
+            if(_num<=1||_num==null)
+                location.href = "index"+"."+"shtml";
+            else if(_num>countPage)
+                alert("本栏目最多"+countPage+"页");
+            else
+                location.href = url;
+        }
+        -->
+    </script>
+    <!--跳转网页end-->
+
+</head>
+<body>
+
+<div class="aritcle_main">
+    <div class="article_inner">
+        <div style="padding-top:10px;"></div>
+            <div class="article_inner_title">
+                    <li>当前位置：</li>
+                    <li><a href="index.html" target="_parent">主页</a></li>
+                    <li>&nbsp>&nbsp</li>
+                    <li class="active">部门概况</li>
+            </div>
+            <div class="clear"></div>
+            <div class="article_inner_left">
+                <div class="article_inner_left_top">
+                    <a href="#">理论思想</a>
+                </div>
+
+                <div class="clear"></div>
+                <!--颜色不同的两根线start-->
+                <div class="article_inner_left_top_line1">
+                </div>
+
+                <div class="article_inner_left_top_line2">
+                </div>
+                <!--颜色不同的两根线end-->
+                <div class="clear"></div>
+                <div class="artice_inner_left_main">
+                    <ul>
+
+                        <li>
+                            <div style="float: left;"><a href="http://dangjian.com/djw2016sy/djw2016syyw/201804/t20180408_4646324.shtml" target="_blank" title="习近平在前几届博鳌论坛上的精彩观点">习近平在前几届博鳌论坛上的精彩观点</a></div>
+                            <span>2018-04-08</span>
+                            <div class="clear"></div>
+                        </li>
+
+                        <li>
+                            <div style="float: left;"><a href="http://dangjian.com/djw2016sy/djw2016syyw/201804/t20180409_4647668.shtml" target="_blank" title="奏响新时代的凯歌">奏响新时代的凯歌</a></div>
+                            <span>2018-04-09</span>
+                            <div class="clear"></div>
+                        </li>
+
+                        <li>
+                            <div style="float: left;"><a href="http://dangjian.com/djw2016sy/djw2016syyw/201804/t20180409_4647657.shtml" target="_blank" title="黄坤明：组建文化和旅游部具有深远历史意义">黄坤明：组建文化和旅游部具有深远历史意义</a></div>
+                            <span>2018-04-09</span>
+                            <div class="clear"></div>
+                        </li>
+
+                        <li>
+                            <div style="float: left;"><a href="http://dangjian.com/djw2016sy/djw2016syyw/201804/t20180409_4648142.shtml" target="_blank" title="科学思想的伟力历久不衰（学苑论衡）">科学思想的伟力历久不衰（学苑论衡）</a></div>
+                            <span>2018-04-09</span>
+                            <div class="clear"></div>
+                        </li>
+
+                        <li>
+                            <div style="float: left;"><a href="http://dangjian.com/djw2016sy/djw2016syyw/201804/t20180409_4648138.shtml" target="_blank" title="自觉增强程序意识（思想纵横）">自觉增强程序意识（思想纵横）</a></div>
+                            <span>2018-04-09</span>
+                            <div class="clear"></div>
+                        </li>
+
+                    </ul>
+
+                    <ul>
+                        <li>
+                            <div style="float: left;"><a href="http://dangjian.com/djw2016sy/djw2016syyw/201804/t20180409_4648130.shtml" target="_blank" title="学会“看全局”（人民论坛）" >学会“看全局”（人民论坛）</a></div>
+                            <span>2018-04-09</span>
+                            <div class="clear"></div>
+                        </li>
+
+                        <li>
+                            <div style="float: left;"><a href="http://dangjian.com/djw2016sy/djw2016syyw/201804/t20180404_4644228.shtml" target="_blank" title="贯彻习近平总书记“三农”思想 奋力推动安徽乡村振兴（省委书记谈乡村振兴(14)）">贯彻习近平总书记“三农”思想 奋力推动安徽乡村振兴（省委书记谈乡村振兴(14)）</a></div>
+                            <span>2018-04-04</span>
+                            <div class="clear"></div>
+                        </li>
+
+                        <li>
+                            <div style="float: left;"><a href="http://dangjian.com/djw2016sy/djw2016syyw/201804/t20180409_4648120.shtml" target="_blank" title="领导干部增强学习本领应注意的几个方面">领导干部增强学习本领应注意的几个方面</a></div>
+                            <span>2018-04-09</span>
+                            <div class="clear"></div>
+                        </li>
+
+                        <li>
+                            <div style="float: left;"><a href="http://dangjian.com/djw2016sy/djw2016syyw/201804/t20180409_4648105.shtml" target="_blank" title="加强非公党建的五个着力点">加强非公党建的五个着力点</a></div>
+                            <span>2018-04-09</span>
+                            <div class="clear"></div>
+                        </li>
+
+                        <li>
+                            <div style="float: left;"><a href="http://dangjian.com/djw2016sy/djw2016syyw/201804/t20180409_4648102.shtml" target="_blank" title="西北大学：公诚勤朴 成风化人">西北大学：公诚勤朴 成风化人</a></div>
+                            <span>2018-04-09</span>
+                            <div class="clear"></div>
+                        </li>
+
+                    </ul>
+
+                    <ul>
+
+                        <li>
+                            <div style="float: left;"><a href="http://dangjian.com/djw2016sy/djw2016syyw/201804/t20180408_4646343.shtml" target="_blank" title="兰州大学围绕三个“+”让每个党支部活起来">兰州大学围绕三个“+”让每个党支部活起来</a></div>
+                            <span>2018-04-08</span>
+                            <div class="clear"></div>
+                        </li>
+
+                        <li>
+                            <div style="float: left;"><a href="http://dangjian.com/djw2016sy/djw2016syyw/201804/t20180404_4644217.shtml" target="_blank" title="中央文明办召开学雷锋志愿服务工作推进会">中央文明办召开学雷锋志愿服务工作推进会</a></div>
+                            <span>2018-04-04</span>
+                            <div class="clear"></div>
+                        </li>
+
+                        <li>
+                            <div style="float: left;"><a href="http://dangjian.com/djw2016sy/djw2016syyw/201804/t20180404_4644260.shtml" target="_blank" title="政治生态的“七看”“七着力”">政治生态的“七看”“七着力”</a></div>
+                            <span>2018-04-04</span>
+                            <div class="clear"></div>
+                        </li>
+
+                        <li>
+                            <div style="float: left;"><a href="http://dangjian.com/djw2016sy/djw2016syyw/201804/t20180404_4644263.shtml" target="_blank" title="浙江互联网企业党建工作&quot;网性&quot;&quot;党性&quot;两手抓">浙江互联网企业党建工作"网性""党性"两手抓</a></div>
+                            <span>2018-04-04</span>
+                            <div class="clear"></div>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="artice_inner_left_linkage">
+                    <span class="First_Page">首&nbsp;&nbsp;页</span>&nbsp;<span class="Fir_Page">上一页</span>&nbsp;<span class="action_num">1</span>&nbsp;<a href="http://dangjian.com/djw2016sy/djw2016syyw/index_1.shtml">2</a>&nbsp;<a href="http://dangjian.com/djw2016sy/djw2016syyw/index_2.shtml">3</a>&nbsp;<a href="http://dangjian.com/djw2016sy/djw2016syyw/index_3.shtml">4</a>&nbsp;<a href="http://dangjian.com/djw2016sy/djw2016syyw/index_4.shtml">5</a>&nbsp;<span class="next_Page_Action"><a href="http://dangjian.com/djw2016sy/djw2016syyw/index_1.shtml">下一页</a></span>&nbsp;<span class="Last_Page_Action"><a href="http://dangjian.com/djw2016sy/djw2016syyw/index_19.shtml">尾&nbsp;&nbsp;页</a></span>&nbsp;<font class="font12">转到第&nbsp;<input type="text" value="1" style="width:30px;font-size:12px;" onkeydown="toPage(event,this)">&nbsp;页</font>
+                 </div>
+            </div>
+            <div class="article_inner_right">
+                <div class="article_inner_right_top">
+                 <a href="#">宣传栏</a>
+                </div>
+
+                <div class="clear"></div>
+
+                <div class="article_inner_right_top_line1">
+                </div>
+                <div class="article_inner_right_top_line2">
+                </div>
+                <div class="clear"></div>
+
+                <div class="article_inner_right_main_longbox">
+                    <div class="img">
+
+                        <a href="http://dangjian.com/djw2016sy/djw2016sydjds/ds2016sbgd/201802/t20180211_4589782.shtml" target="_blank"><img src="css/sbgd.jpg" alt="2.jpg" title=""></a>
+
+                    </div>
+                    <div class="lx-p">
+                        <a href="http://dangjian.com/djw2016sy/djw2016sydjds/ds2016sbgd/" target="_blank">身<br>边<br>感<br>动</a>
+                    </div>
+                </div>
+
+                <div class="article_inner_right_main_longbox">
+                        <div class="img">
+
+                            <a href="http://dangjian.com/djw2016sy/djw2016sydjds/ds2016whdg/201803/t20180316_4623575.shtml" target="_blank"><img src="css/whdg.jpg" alt="555.jpg" title=""></a>
+
+                        </div>
+                        <div class="lx-p"><a href="http://dangjian.com/djw2016sy/djw2016sydjds/ds2016whdg/" target="_blank">文<br>化<br>大<br>观</a></div>
+                </div>
+                <div class="article_inner_right_main_shortbox">
+                    <div class="img">
+                        <a href="http://dangjian.com/specials/xxjd/" target="_blank">
+                            <img src="css/lxyz.png">
+                        </a>
+                    </div>
+                    <div style="height: 10px;"></div>
+                    <p><a href="http://dangjian.com/djw2016sy/djw2016wkztl/wkztl2016lxyz/" target="_blank">两学一做</a></p>
+                </div>
+
+                <div class="article_inner_right_main_shortbox">
+                    <div class="img">
+                        <a href="http://dangjian.com/djw2016sy/djw2016wkztl/wkztl2016dzdg/" target="_blank">
+                            <img src="css/dzdg.png">
+                        </a>
+                    </div>
+                    <p><a href="http://dangjian.com/djw2016sy/djw2016wkztl/wkztl2016dzdg/" target="_blank">党章党规</a></p>
+                </div>
+
+                <div class="clear"></div>
+
+
+                <div class="article_inner_right_main_shortbox">
+                    <div class="img">
+                        <a href="http://dangjian.com/djw2016sy/djw2016wkztl/sanxin/" target="_blank">
+                            <img src="css/xlnxzl.png">
+                        </a>
+                        <p><a href="http://dangjian.com/djw2016sy/djw2016wkztl/sanxin/" target="_blank">新理念新思想<br>新战略</a></p>                    </div>
+
+                </div>
+
+                <div class="article_inner_right_main_shortbox">
+                    <div class="img">
+                        <a href="http://dangjian.com/specials/xxjd/" target="_blank">
+                            <img src="css/xxdj.png">
+                        </a>
+                    </div>
+                   <p> <a href="http://dangjian.com/specials/xxjd/" target="_blank">学习经典</a></p>
+
+                </div>
+
+         </div>
+    </div>
+
+</div>
+
+</body>
+</html>

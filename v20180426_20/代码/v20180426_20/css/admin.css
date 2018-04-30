@@ -1,0 +1,21 @@
+.conetext_inner{
+    width: 1000px;
+    height: 624px;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 10px;
+}
+.inner-left{
+    float: left;
+    width: 300px;
+    height: 1500px;
+    background-color: #00aa00;
+}
+
+.inner-right{
+    float: left;
+    width: 700px;
+    height: 1500px;
+    background-color: #00aaee;
+}
